@@ -1,6 +1,6 @@
 {
   "name": "zod-prisma-generator",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "A Prisma generator that automatically creates Zod schemas from your Prisma schema models",
   "author": "jackall3n",
   "license": "MIT",

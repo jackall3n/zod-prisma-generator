@@ -27,7 +27,7 @@ generator client {
 }
 
 generator zod {
-  provider = "bun ./src/index.ts"
+  provider = "zod-prisma-generator"
   output   = "../generated/schemas"
   enums    = true
 }
