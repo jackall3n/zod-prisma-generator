@@ -24,8 +24,6 @@ generatorHandler({
         };
     },
     async onGenerate(options) {
-        console.log(options);
-
         const { generator } = options;
 
         const outputDir = generator.output?.value ?? "./";
@@ -64,8 +62,6 @@ async function createEnumsFile(outputDir: string, enums: readonly DMMF.Datamodel
     const statements: ts.Statement[] = [];
 
     for (const e of enums) {
-        console.log(e.name, e.values);
-
         const schema = ts.factory.createVariableStatement(
             [ts.factory.createModifier(ts.SyntaxKind.ExportKeyword)],
             factory.createVariableDeclarationList(
@@ -99,7 +95,6 @@ async function createEnumsFile(outputDir: string, enums: readonly DMMF.Datamodel
                 [factory.createTypeQueryNode(factory.createIdentifier(`${e.name}Schema`))],
             ),
         );
-
 
         statements.push(schema);
         statements.push(infer);
