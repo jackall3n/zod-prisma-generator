@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "type": "module",
   "bin": {
-    "zod-prisma-generator": "dist/index.js"
+    "zod-prisma-generator": "dist/bin.mjs"
   },
   "license": "MIT",
   "description": "A Prisma generator that automatically creates Zod schemas from your Prisma schema models",
