@@ -88,7 +88,7 @@ async function createEnumsFile(outputDir: string, enums: readonly DMMF.Datamodel
 
         const infer = factory.createTypeAliasDeclaration(
             [factory.createModifier(ts.SyntaxKind.ExportKeyword)],
-            e.name,
+            `${e.name}Type`,
             undefined,
             factory.createTypeReferenceNode(
                 factory.createQualifiedName(factory.createIdentifier("z"), factory.createIdentifier("infer")),
