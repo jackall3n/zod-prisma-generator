@@ -1,6 +1,6 @@
 {
   "name": "zod-prisma-generator",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "type": "module",
   "bin": {
     "zod-prisma-generator": "dist/bin.mjs"
@@ -31,6 +31,7 @@
     "build": "tsdown",
     "dev": "tsdown --watch",
     "test": "vitest",
+    "bump": "bumpp",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "pnpm run build"
   },
