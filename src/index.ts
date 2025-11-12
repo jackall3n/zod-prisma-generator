@@ -1,11 +1,12 @@
-import { generatorHandler, type DMMF } from "@prisma/generator-helper";
+import type { DMMF } from "@prisma/generator-helper";
+import generator from '@prisma/generator-helper';
 import ts from "typescript";
 import fs from 'node:fs/promises';
 import { join } from 'node:path';
 
 const { factory } = ts;
 
-generatorHandler({
+generator.generatorHandler({
     onManifest() {
         let version: string | undefined;
 
