@@ -1,5 +1,5 @@
 import type { DMMF } from "@prisma/generator-helper";
-import generator from '@prisma/generator-helper';
+import * as generator from '@prisma/generator-helper';
 import ts from "typescript";
 import fs from 'node:fs/promises';
 import { join } from 'node:path';
