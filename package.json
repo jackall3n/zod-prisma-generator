@@ -1,7 +1,6 @@
 {
   "name": "zod-prisma-generator",
   "version": "0.2.5",
-  "type": "module",
   "bin": {
     "zod-prisma-generator": "dist/bin.mjs"
   },
