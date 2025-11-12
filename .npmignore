@@ -1,0 +1,43 @@
+# Source files
+src/
+*.ts
+!*.d.ts
+
+# Development files
+.cursor/
+.vscode/
+.gitignore
+CLAUDE.md
+tsconfig.json
+
+# Test files
+*.test.ts
+*.spec.ts
+__tests__/
+
+# Example/Demo files
+prisma/
+prisma.config.ts
+generated/
+
+# Lock files
+bun.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment files
+.env
+.env.*
+
+# Build artifacts
+*.log
+*.tsbuildinfo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation that's not needed in package
+docs/
+examples/

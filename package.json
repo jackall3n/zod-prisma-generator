@@ -1,0 +1,50 @@
+{
+  "name": "zod-prisma-generator",
+  "version": "0.0.2",
+  "description": "A Prisma generator that automatically creates Zod schemas from your Prisma schema models",
+  "author": "jackall3n",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackall3n/zod-prisma-generator.git"
+  },
+  "homepage": "https://github.com/jackall3n/zod-prisma-generator#readme",
+  "bugs": {
+    "url": "https://github.com/jackall3n/zod-prisma-generator/issues"
+  },
+  "keywords": [
+    "prisma",
+    "prisma-generator",
+    "zod",
+    "validation",
+    "schema",
+    "typescript",
+    "bun"
+  ],
+  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target node --format esm",
+    "db:generate": "prisma generate",
+    "prepublishOnly": "bun run build"
+  },
+  "devDependencies": {
+    "@prisma/client": "^6.19.0",
+    "@prisma/generator-helper": "^6.19.0",
+    "@types/bun": "latest",
+    "prisma": "^6.19.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "zod": "^4.1.12"
+  }
+}
