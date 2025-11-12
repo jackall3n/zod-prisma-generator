@@ -75,7 +75,7 @@ async function createEnumsFile(outputDir: string, enums: readonly DMMF.Datamodel
                             undefined,
                             [
                                 ts.factory.createArrayLiteralExpression(
-                                    e.values.map(v => ts.factory.createStringLiteral(`${e.name}`)),
+                                    e.values.map(v => ts.factory.createStringLiteral(v.name)),
                                     false
                                 )
                             ]
