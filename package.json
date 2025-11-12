@@ -1,54 +1,45 @@
 {
   "name": "zod-prisma-generator",
   "version": "0.1.0",
+  "type": "module",
   "bin": {
     "zod-prisma-generator": "dist/index.js"
   },
-  "description": "A Prisma generator that automatically creates Zod schemas from your Prisma schema models",
-  "author": "jackall3n",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jackall3n/zod-prisma-generator.git"
-  },
+  "description": "A Prisma generator that automatically creates Zod schemas from your Prisma schema models",
   "homepage": "https://github.com/jackall3n/zod-prisma-generator#readme",
   "bugs": {
     "url": "https://github.com/jackall3n/zod-prisma-generator/issues"
   },
-  "keywords": [
-    "prisma",
-    "prisma-generator",
-    "zod",
-    "validation",
-    "schema",
-    "typescript",
-    "bun"
-  ],
-  "module": "dist/index.js",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackall3n/zod-prisma-generator.git"
+  },
+  "author": "jackall3n <jackall3n@gmail.com>",
   "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
+    "dist"
   ],
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./bin": "./dist/bin.mjs",
+    "./package.json": "./package.json"
+  },
   "scripts": {
-    "build": "bun run build.ts",
-    "db:generate": "prisma generate",
-    "prepublishOnly": "bun run build"
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
-    "@prisma/client": "^6.19.0",
     "@prisma/generator-helper": "^6.19.0",
-    "@types/bun": "latest",
+    "@types/node": "^24.10.0",
     "bumpp": "^10.3.1",
-    "prisma": "^6.19.0"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  },
-  "dependencies": {
-    "zod": "^4.1.12"
+    "tsdown": "^0.16.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.7"
   }
 }

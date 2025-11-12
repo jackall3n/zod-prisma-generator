@@ -128,9 +128,9 @@ async function createIndexFile(outputDir: string) {
     // create index.ts with export * from './enums';
     const declaration = factory.createExportDeclaration(
         undefined,
-        undefined,
-        factory.createIdentifier("*"),
-        factory.createStringLiteral("./enums")
+        undefined as any,
+        factory.createIdentifier("*") as any,
+        factory.createStringLiteral("./enums") as any
     );
 
     const updatedSource = factory.updateSourceFile(source, [declaration]);
